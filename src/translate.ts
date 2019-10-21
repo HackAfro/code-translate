@@ -14,7 +14,6 @@ export async function doTranslate(language: 'en' | 'fr' | 'es' | 'de' | 'pt') {
     // Display a status bar message to show progress
     vscode.window.setStatusBarMessage('Translating ....');
     const [translation] = await translator.translate(textSelection, language);
-    console.log(translation);
     vscode.window.showInformationMessage(translation);
     vscode.window.setStatusBarMessage('Translated successfully', 2000);
   }
